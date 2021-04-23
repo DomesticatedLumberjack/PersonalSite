@@ -14,6 +14,7 @@ export const NavMenu: React.FC = () => {
             <Nav activeKey="/home">
               <Nav.Link className="text-light" href="/">About</Nav.Link>
               <Nav.Link className="text-light" href="/blog">Blog</Nav.Link>
+              <Nav.Link className="text-light" href="/resume">Resume</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

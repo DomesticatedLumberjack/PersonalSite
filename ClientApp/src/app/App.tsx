@@ -6,11 +6,11 @@ import BlogDashboard from '../components/Blog/BlogDashboard';
 import { AdminDashboard } from '../components/Admin/AdminDashboard';
 import BlogForm from '../components/Form/BlogForm';
 import Login from '../components/Login/Login';
-import { Register } from '../components/Register/Register';
 import { ToastContainer } from 'react-toastify';
 import { NavMenu } from '../components/NavMenu/NavMenu';
 import { Container } from 'react-bootstrap';
 import PrivateRoute from './PrivateRoute';
+import Resume from '../components/Resume/Resume';
 
 const App = () => {
   return(
@@ -24,6 +24,7 @@ const App = () => {
           <PrivateRoute exact path='/admin' component={AdminDashboard}/>
           <Route path={['/admin/createpost', '/admin/managepost/:id'] } component={BlogForm}/>
           <Route exact path='/login' component={Login}/>
+          <Route exact path='/resume' component={Resume}/>
         </Switch>
       </Container>
     </>

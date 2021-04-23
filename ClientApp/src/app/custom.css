@@ -16,3 +16,9 @@ code {
 body {
   background-color: rgb(234, 234, 234) !important;
 }
+
+/* React-pdf */
+.react-pdf__Document{
+  display: flex;
+  justify-content: center;
+}
