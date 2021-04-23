@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Site.Application.Interfaces;
 using Site.Infrastructure.Security;
 using Site.Middleware;
+using System;
 
 namespace Site
 {
@@ -56,7 +57,7 @@ namespace Site
             identityBuilder.AddEntityFrameworkStores<DataContext>();
             identityBuilder.AddSignInManager<SignInManager<AppUser>>();
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["TokenKey"])); //Also change in Site.Security.JwtGenerator
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<string>("Token:Key"))); //Also change in Site.Security.JwtGenerator
 
             services.AddAuthentication(opt => {
                 opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

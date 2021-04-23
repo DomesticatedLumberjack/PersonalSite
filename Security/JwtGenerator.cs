@@ -8,6 +8,7 @@ using System.Text;
 using System;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Identity;
+using System.Configuration;
 
 namespace Site.Infrastructure.Security
 {
@@ -17,7 +18,7 @@ namespace Site.Infrastructure.Security
         private readonly UserManager<AppUser> _userManager;
         public JwtGenerator(IConfiguration config, UserManager<AppUser> userManager)
         {
-            _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["TokenKey"]));
+            _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config.GetValue<string>("Token:Key")));
             _userManager = userManager;
         }
 
