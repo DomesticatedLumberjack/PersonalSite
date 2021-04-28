@@ -9,7 +9,6 @@ using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Site.Persistence;
-using Site.Application.Users;
 using Site.Application.Errors;
 
 namespace Site.Application.Users

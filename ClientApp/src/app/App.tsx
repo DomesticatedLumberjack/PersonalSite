@@ -11,6 +11,7 @@ import { NavMenu } from '../components/NavMenu/NavMenu';
 import { Container } from 'react-bootstrap';
 import PrivateRoute from './PrivateRoute';
 import Resume from '../components/Resume/Resume';
+import { Register } from '../components/Register/Register';
 
 const App = () => {
   return(

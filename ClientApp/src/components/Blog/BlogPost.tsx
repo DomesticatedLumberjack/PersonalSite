@@ -48,4 +48,5 @@ export const BlogPost: React.FC<{post: IBlogPost, index: number}> = ({post, inde
             </Fade>
         </>
     );
+    
 }
